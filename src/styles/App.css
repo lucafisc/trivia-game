@@ -1,3 +1,52 @@
 .app {
     position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.start-container>h1 {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--dark-blue);
+}
+
+.start-container>h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--medium-blue);
+}
+
+.start-container>button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    width: 193px;
+    height: 52px;
+    background-color: var(--medium-blue);
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+button:active {
+    box-shadow: inset 1px 1px 10px #333;
 }
