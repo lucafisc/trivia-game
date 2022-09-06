@@ -10,7 +10,9 @@ export default function Question(props) {
   );
 
   const incorrectAnswers = props.data.incorrect_answers;
-  const correctAnswer = props.data.correct_answer;
+  const [correctAnswer, setCorrectAnswer] = React.useState(
+    props.data.correct_answer
+  );
   const [answersArray, setanswersArray] = React.useState(
     shuffle(incorrectAnswers.concat(correctAnswer))
   );
@@ -30,6 +32,8 @@ export default function Question(props) {
         data={answer}
         chooseAnswer={chooseAnswer}
         selectedAnswer={selectedAnswer}
+        checkAnswers={props.checkAnswers}
+        correctAnswer={correctAnswer}
       />
     );
   });

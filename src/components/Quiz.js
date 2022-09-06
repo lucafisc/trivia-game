@@ -8,7 +8,7 @@ export default function Quiz(props) {
   React.useEffect(() => {
     async function fetchData() {
       const res = await fetch(
-        "https://opentdb.com/api.php?amount=5&type=multiple"
+        "https://opentdb.com/api.php?amount=5&category=22&type=multiple"
       );
       const data = await res.json();
       setTriviaData(data.results);
@@ -16,14 +16,24 @@ export default function Quiz(props) {
     fetchData();
   }, [newGame]);
 
+  const [checkAnswers, setCheckAnswers] = React.useState(false);
+  function toggleCheckAnswers() {
+    setCheckAnswers((prevValue) => !prevValue);
+  }
+
   const questions = triviaData.map((question) => {
-    return <Question data={question} />;
+    return <Question data={question} checkAnswers={checkAnswers} />;
   });
 
   return (
     <div className="quiz-container">
       {questions}
-      <button>Check answers</button>
+      <div className="check-container">
+        {checkAnswers && <h1>You scored /5 correct answers</h1>}
+        <button onClick={toggleCheckAnswers}>
+          {checkAnswers ? "Play Again" : "Check answers"}
+        </button>
+      </div>
     </div>
   );
 }

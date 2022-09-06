@@ -53,7 +53,26 @@
 
 }
 
-.quiz-container>button {
+.correct {
+    border-color: #94D7A2;
+    background-color: #94D7A2;
+}
+
+.wrong {
+    border-color: #F8BCBC;
+    background-color: #F8BCBC;
+}
+
+.other {}
+
+.check-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.check-container>button {
     width: fit-content;
     align-self: center;
     font-family: 'Inter';
@@ -67,8 +86,15 @@
     outline: none;
     border: none;
     border-radius: 10px;
-    margin-top: 15px;
 
+}
+
+.check-container>h1 {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--dark-blue);
 }
 
 button:active {
