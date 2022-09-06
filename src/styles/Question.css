@@ -49,6 +49,7 @@
 .answer:hover {
     border-color: var(--light-blue);
     background-color: var(--light-blue);
+
 }
 
 .quiz-container>button {
