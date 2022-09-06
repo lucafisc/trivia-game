@@ -23,7 +23,7 @@ export default function Quiz(props) {
   return (
     <div className="quiz-container">
       {questions}
-      <button>Check answers</button>;
+      <button>Check answers</button>
     </div>
   );
 }
