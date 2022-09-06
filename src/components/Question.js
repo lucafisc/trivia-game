@@ -15,17 +15,25 @@ export default function Question(props) {
     shuffle(incorrectAnswers.concat(correctAnswer))
   );
 
-  const answers = answersArray.map((answer) => {
-    return <Answer data={answer} chooseAnswer={chooseAnswer} />;
-  });
-
-  const [chosenAnswer, setChosenAnswer] = React.useState(false);
+  const [selectedAnswer, setselectedAnswer] = React.useState(false);
   function chooseAnswer(value) {
-    setChosenAnswer(value);
-    console.log(chosenAnswer);
+    setselectedAnswer(value);
   }
 
-  React.useEffect(() => {}, []);
+  React.useEffect(() => {
+    console.log(selectedAnswer);
+  }, [selectedAnswer]);
+
+  const answers = answersArray.map((answer) => {
+    return (
+      <Answer
+        data={answer}
+        chooseAnswer={chooseAnswer}
+        selectedAnswer={selectedAnswer}
+      />
+    );
+  });
+
   return (
     <div className="question">
       <h1>{question}</h1>
