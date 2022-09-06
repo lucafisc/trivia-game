@@ -20,5 +20,10 @@ export default function Quiz(props) {
     return <Question data={question} />;
   });
 
-  return <div className="quiz-container">{questions}</div>;
+  return (
+    <div className="quiz-container">
+      {questions}
+      <button>Check answers</button>;
+    </div>
+  );
 }
