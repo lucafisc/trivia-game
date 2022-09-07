@@ -22,6 +22,12 @@ export default function Question(props) {
     setselectedAnswer(value);
   }
 
+  React.useEffect(() => {
+    if (selectedAnswer === correctAnswer) {
+      props.addPoint();
+    }
+  }, [props.checkAnswers]);
+
   const answers = answersArray.map((answer) => {
     return (
       <Answer

@@ -34,6 +34,7 @@
     justify-content: center;
     cursor: pointer;
     min-width: 65px;
+    transition: all 0.2s ease-out;
 }
 
 .answer>h2 {
@@ -52,10 +53,15 @@
     background-color: var(--light-blue);
 }
 
+.answer:not(.correct):not(.wrong):not(.other):active {
+    box-shadow: inset 0px 0px 16px -9px #000000;
+}
+
 .correct,
 .wrong,
 .other {
     cursor: default;
+
 }
 
 .correct {
