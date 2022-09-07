@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/trivia-game/static/css/main.48bd92aa.css",
-    "main.js": "/trivia-game/static/js/main.68a12208.js",
+    "main.js": "/trivia-game/static/js/main.04c359a2.js",
     "static/js/787.600ff09a.chunk.js": "/trivia-game/static/js/787.600ff09a.chunk.js",
     "index.html": "/trivia-game/index.html",
     "static/media/blobs-top.svg": "/trivia-game/static/media/blobs-top.0a17f18bc56a71576ad4176fff8be26c.svg",
     "static/media/blobs-bottom.svg": "/trivia-game/static/media/blobs-bottom.525168dbbea202b7f9fb34a805d287c8.svg",
     "main.48bd92aa.css.map": "/trivia-game/static/css/main.48bd92aa.css.map",
-    "main.68a12208.js.map": "/trivia-game/static/js/main.68a12208.js.map",
+    "main.04c359a2.js.map": "/trivia-game/static/js/main.04c359a2.js.map",
     "787.600ff09a.chunk.js.map": "/trivia-game/static/js/787.600ff09a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.48bd92aa.css",
-    "static/js/main.68a12208.js"
+    "static/js/main.04c359a2.js"
   ]
 }
