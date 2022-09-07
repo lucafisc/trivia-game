@@ -17,11 +17,11 @@ export default function Quiz(props) {
     );
     const data = await res.json();
     setTriviaData(data.results);
-    setCheckAnswers((prevValue) => !prevValue);
+    setCheckAnswers(false);
   }
 
   function toggleCheckAnswers() {
-    setCheckAnswers((prevValue) => !prevValue);
+    setCheckAnswers(true);
   }
 
   function addPoint() {
