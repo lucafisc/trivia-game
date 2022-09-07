@@ -3,12 +3,12 @@ import Answer from "./Answer";
 import "../styles/Question.css";
 import he from "he";
 import shuffle from "fisher-yates";
+import { nanoid } from "nanoid";
 
 export default function Question(props) {
   const [question, setQuestion] = React.useState(
     he.decode(props.data.question)
   );
-
   const incorrectAnswers = props.data.incorrect_answers;
   const [correctAnswer, setCorrectAnswer] = React.useState(
     props.data.correct_answer
@@ -16,15 +16,11 @@ export default function Question(props) {
   const [answersArray, setanswersArray] = React.useState(
     shuffle(incorrectAnswers.concat(correctAnswer))
   );
-
   const [selectedAnswer, setselectedAnswer] = React.useState(false);
+
   function chooseAnswer(value) {
     setselectedAnswer(value);
   }
-
-  React.useEffect(() => {
-    console.log(selectedAnswer);
-  }, [selectedAnswer]);
 
   const answers = answersArray.map((answer) => {
     return (
@@ -34,6 +30,7 @@ export default function Question(props) {
         selectedAnswer={selectedAnswer}
         checkAnswers={props.checkAnswers}
         correctAnswer={correctAnswer}
+        key={nanoid()}
       />
     );
   });
