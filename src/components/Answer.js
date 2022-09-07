@@ -11,7 +11,10 @@ export default function Answer(props) {
   );
 
   return (
-    <div className={classes} onClick={() => props.chooseAnswer(answer)}>
+    <div
+      className={classes}
+      onClick={() => (props.checkAnswers ? false : props.chooseAnswer(answer))}
+    >
       <h2>{answer}</h2>
     </div>
   );
